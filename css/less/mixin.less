@@ -1,4 +1,13 @@
 
+.lp(@font, @line) {
+	line-height: (@font*@x)/@line;
+}
+.fp(@font) {
+	font-size: @font*@xp;
+}
+.fr(@font) {
+	font-size: @font*@xr;
+}
 .ls(@font, @value) {
 	letter-spacing: @font*@value/1000px;
 }
