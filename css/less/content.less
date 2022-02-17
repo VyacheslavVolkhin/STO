@@ -217,8 +217,35 @@
     }
     .price-table {
         overflow: auto;
-        -ms-overflow-style: none;
+        padding-bottom: 10px;
         &::-webkit-scrollbar {
+            height: 4px;
+            width: 4px;
+            background-color: #f0f0f0;
+        }
+        &::-webkit-scrollbar-thumb {
+            background-color: var(--clr-light);
+        }
+        &::-webkit-scrollbar-thumb:hover {
+            background-color: var(--clr-light);
+        }
+        &::-webkit-scrollbar-button:vertical:start:decrement {
+            background-color: transparent;
+            width: 0;
+            height: 0;
+        }
+        &::-webkit-scrollbar-button:vertical:end:increment {
+            background-color: transparent;
+            width: 0;
+            height: 0;
+        }
+        &::-webkit-scrollbar-button:horizontal:start:decrement {
+            background-color: transparent;
+            width: 0;
+            height: 0;
+        }
+        &::-webkit-scrollbar-button:horizontal:end:increment {
+            background-color: transparent;
             width: 0;
             height: 0;
         }
@@ -229,7 +256,7 @@
     }
 }
 .faq-box {
-    margin-bottom: 50px;
+    margin-bottom: 55px;
     .title-box {
         margin-bottom: 30px;
         .page-title {
@@ -239,7 +266,7 @@
     .items-outer-wrap {
         display: flex;
         background: #f1f1f1;
-        padding: 30px 0;
+        padding: 30px 0 25px 0;
         position: relative;
         &:before, &:after {
         	content: "";
@@ -266,12 +293,12 @@
         overflow: hidden;
     }
     .item-wrap {
-        margin-bottom: 14px;
+        margin-bottom: 12px;
         &:last-child {
             margin-bottom: 0;
         }
         &.wrap-link {
-            padding-top: 10px;
+            padding-top: 12px;
         }
     }
     .slider-wrap {
@@ -531,6 +558,25 @@
 }
 .menu-box {
     margin-bottom: 35px;
+
+    .menu-toggle-wrap {
+        display: none;
+        position: absolute;
+        bottom: 0;
+        left: 0px;
+        right: 0;
+        z-index: 4;
+        a {
+            display: block;
+            width: 100%;
+            color: var(--clr-att);
+            height: 30px;
+            line-height: 30px;
+            &:before {
+                content: attr(data-show);
+            }
+        }
+    }
     .menu-inner-wrap {
         line-height: 4.68/4.37;
         .fp(4.37);
@@ -539,6 +585,15 @@
             margin: 0;
             &.active {
                 display: block;
+            }
+            &.tab-open {
+                .menu-toggle-wrap {
+                    a {
+                        &:before {
+                            content: attr(data-hide);
+                        }
+                    }
+                }
             }
         }
         .menu {
@@ -717,6 +772,12 @@
         .del-tab-wrap {
             font-size: 14px;
             padding: 20px;
+        }
+        .price-table {
+            margin-left: -20px;
+            margin-right: -20px;
+            padding-left: 20px;
+            padding-right: 20px;
         }
     }
     .contacts-box {
@@ -933,6 +994,38 @@
             }
             .menu {
                 display: none;
+            }
+        }
+        .menu-wrap {
+            max-height: 300px;
+            overflow: hidden;
+            position: relative;
+            &.tab-active {
+                &:before {
+                    content: "";
+                    display: block;
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    right: 0;
+                    z-index: 3;
+                    height: 100px;
+                    background: linear-gradient(fade(#000, 0) 0%, #fff 70%);
+                    pointer-events: none;
+                }
+                .menu-toggle-wrap {
+                    display: block;
+                    text-align: center;
+                }
+            }
+            &:not(.tab-active) {
+            }
+            &.tab-open {
+                max-height: inherit;
+                padding-bottom: 30px;
+                &:before {
+                    height: 40px;
+                }
             }
         }
     }
