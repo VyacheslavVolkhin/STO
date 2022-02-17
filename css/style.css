@@ -1131,8 +1131,8 @@ body {
             filter: none;
   }
   .nav .menu > li.menu-catalog .btn-menu {
-    background: -webkit-gradient(linear, left top, left bottom, from(#fe0005), to(#d01c1c));
-    background: linear-gradient(to bottom, #fe0005, #d01c1c);
+    background: -webkit-gradient(linear, left bottom, left top, color-stop(0, #d90000), to(red));
+    background: linear-gradient(to top, #d90000 0, red 100%);
     color: #fff;
   }
   .nav .menu > li.menu-catalog .btn-menu:after {
