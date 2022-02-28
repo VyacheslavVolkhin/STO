@@ -1,7 +1,7 @@
 @charset "UTF-8";
 :root {
   --clr-base: #000;
-  --clr-att: #db0000;
+  --clr-att: #ff0000;
   --clr-link: #3964ab;
   --clr-light: #808080;
   --min: 320px;
@@ -44,11 +44,11 @@ li {
 }
 a {
   text-decoration: none;
-  color: var(--clr-att, #db0000);
+  color: var(--clr-att, #ff0000);
 }
 a:hover {
   text-decoration: none;
-  color: var(--clr-att, #db0000);
+  color: var(--clr-att, #ff0000);
 }
 a.link-main,
 .link-main {
@@ -586,7 +586,7 @@ body {
 .header .phone-wrap a {
   display: block;
   white-space: nowrap;
-  color: var(--clr-att);
+  color: #fe0000;
   text-decoration: none;
 }
 .header .email-wrap {
@@ -606,7 +606,7 @@ body {
   margin: 6px 0 0 0;
 }
 .header .location-wrap {
-  color: #4e6a89;
+  color: #3e6a8a;
   margin-top: 8px;
 }
 .header .logo-wrap {
@@ -1842,7 +1842,7 @@ body {
 }
 .item-faq .btn-faq .faq-link {
   display: inline;
-  color: #3964ab;
+  color: #0763af;
 }
 .item-faq .faq-content-block {
   padding: 20px 0;
@@ -2369,7 +2369,7 @@ body {
 }
 .contacts-box .h1-title {
   margin: 0 0 0.2em 0;
-  color: #0685fb;
+  color: #0085fe;
 }
 .contacts-box .h1-title .icon-phone-small {
   display: inline-block;
@@ -2788,8 +2788,8 @@ body {
   margin: 0 -1.7rem 0 0;
 }
 .catalog-box li {
-  margin: 0 17px 18px 0;
-  margin: 0 1.7rem 1.8rem 0;
+  margin: 0 15px 18px 0;
+  margin: 0 1.5rem 1.8rem 0;
   padding: 0;
 }
 .catalog-box li:before {
@@ -2797,7 +2797,7 @@ body {
 }
 .catalog-box .btn-menu {
   height: 33px;
-  padding: 0 12px;
+  padding: 0 14px;
   border: 1px solid #d8d9d9;
   -webkit-transition: all ease 0.2s;
   transition: all ease 0.2s;
@@ -2830,7 +2830,7 @@ body {
      -moz-column-gap: 40px;
           column-gap: 40px;
   line-height: 1.11111111;
-  color: #9d9d9d;
+  color: #a0a0a0;
   font-size: 17.999px;
   font-size: 1.79999712rem;
 }
@@ -3128,8 +3128,8 @@ body {
 .menu-box .btn-menu:hover,
 .menu-box .btn-menu.active {
   color: #fff;
-  background: -webkit-gradient(linear, left top, left bottom, from(#da0000), to(#bf4646));
-  background: linear-gradient(to bottom, #da0000, #bf4646);
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(0, #d90000), to(red));
+  background: linear-gradient(to top, #d90000 0, red 100%);
 }
 .menu-box .btn-menu:hover:after,
 .menu-box .btn-menu.active:after {
@@ -3538,7 +3538,7 @@ input[type="submit"].button-border-light:hover {
 .btn.button-second,
 button.button-second,
 input[type="submit"].button-second {
-  background: #3964ab;
+  background: #0763af;
   border: none;
 }
 .btn.button-second:hover,
@@ -3830,7 +3830,7 @@ input[type="submit"].button-third:hover {
   height: 30px;
   padding: 0 40px 0 16px;
   padding: 0 40px 0 1.6rem;
-  border-color: #888888;
+  border-color: #818181;
   font-size: 14.7499764px;
 }
 .frm-main-search .ico-search {
@@ -3878,7 +3878,7 @@ input[type="submit"].button-third:hover {
   width: 8px;
   height: 8px;
   border-radius: 50%;
-  background: #7e7e7d;
+  background: #7f7f7f;
 }
 .slick-dots li button:hover,
 .slick-dots li button.active {
