@@ -74,6 +74,15 @@ $(document).ready(function(){
 	})
 
 
+    //item-video
+    $('.js-btn-video').on('click', function () {
+        let videoURL = $(this).parent('.item-video').attr('data-video');
+        $(this).parents('.item-video').addClass('active');
+        $(this).parents('.item-video').append('<iframe width="100%" height="100%" src="' + videoURL + '" frameborder="0" allowfullscreen></iframe>')
+        return false;
+    })
+
+
     //nav
     if (!!$('.nav').offset()) {
         var stickyTop = $('.nav').offset().top;
@@ -155,6 +164,7 @@ $(document).ready(function(){
 	$('.js-tab-title').on('click' , function() {
 		if ($(this).hasClass('active')) {
 			$(this).removeClass('active').next('.js-tab-content').slideUp(200);
+            $(this).parent('.js-tab-block').removeClass('tab-open');
             $(this).parent('.js-tab-block').removeClass('tab-active');
 		} else {
 			$(this).addClass('active').next('.js-tab-content').slideDown(200);

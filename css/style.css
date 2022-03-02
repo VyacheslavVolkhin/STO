@@ -61,13 +61,13 @@ a.link-main:hover,
 }
 .page-title,
 h1,
-.h1-title,
+.main-title,
 h2,
-.h2-title,
+.second-title,
 h3,
-.h3-title,
+.small-title,
 h4,
-.h4-title,
+.vsmall-title,
 h5,
 .h5-title,
 h6,
@@ -79,13 +79,13 @@ h6,
 }
 .page-title:first-child,
 h1:first-child,
-.h1-title:first-child,
+.main-title:first-child,
 h2:first-child,
-.h2-title:first-child,
+.second-title:first-child,
 h3:first-child,
-.h3-title:first-child,
+.small-title:first-child,
 h4:first-child,
-.h4-title:first-child,
+.vsmall-title:first-child,
 h5:first-child,
 .h5-title:first-child,
 h6:first-child,
@@ -94,13 +94,13 @@ h6:first-child,
 }
 .page-title .title-att,
 h1 .title-att,
-.h1-title .title-att,
+.main-title .title-att,
 h2 .title-att,
-.h2-title .title-att,
+.second-title .title-att,
 h3 .title-att,
-.h3-title .title-att,
+.small-title .title-att,
 h4 .title-att,
-.h4-title .title-att,
+.vsmall-title .title-att,
 h5 .title-att,
 .h5-title .title-att,
 h6 .title-att,
@@ -110,21 +110,22 @@ h6 .title-att,
 }
 .page-title.title-att,
 h1.title-att,
-.h1-title.title-att,
+.main-title.title-att,
 h2.title-att,
-.h2-title.title-att,
+.second-title.title-att,
 h3.title-att,
-.h3-title.title-att,
+.small-title.title-att,
 h4.title-att,
-.h4-title.title-att,
+.vsmall-title.title-att,
 h5.title-att,
 .h5-title.title-att,
 h6.title-att,
 .h6-title.title-att {
   color: var(--clr-att);
 }
-.h1-title,
+.main-title,
 h1 {
+  font-size: 28.333px;
   font-size: 28.333px;
   font-size: 2.8333288rem;
   line-height: 1.01190314;
@@ -132,6 +133,7 @@ h1 {
 .page-title {
   text-transform: uppercase;
   font-weight: 400;
+  font-size: 28.291px;
   font-size: 28.291px;
   font-size: 2.82916214rem;
 }
@@ -158,6 +160,28 @@ li:before {
   margin-top: -2px;
   background: var(--clr-base);
   border-radius: 50%;
+}
+table {
+  width: 100%;
+  font-size: 14px;
+  line-height: 1.28571429;
+}
+table thead th,
+table thead td {
+  font-weight: bold;
+}
+table th,
+table td {
+  border: 1px solid #e2e2e2;
+  vertical-align: middle;
+  font-size: 1em;
+  line-height: 1.28571429;
+  padding: 9px 10px 9px 10px;
+  text-align: center;
+}
+table th {
+  background: #ebebeb;
+  font-weight: 400;
 }
 @media (max-width: 992px) {
   :root {
@@ -600,7 +624,6 @@ body {
   position: relative;
   overflow: hidden;
   text-overflow: ellipsis;
-  font-weight: 600;
 }
 .header .shedule-wrap {
   margin: 6px 0 0 0;
@@ -610,6 +633,7 @@ body {
   margin-top: 8px;
 }
 .header .logo-wrap {
+  width: 189px;
   width: 189px;
   width: 18.9rem;
   padding-bottom: 10px;
@@ -628,6 +652,7 @@ body {
 .header .header-inner-wrap .callback-wrap {
   -ms-flex-negative: 0;
       flex-shrink: 0;
+  padding-left: 57px;
   padding-left: 57px;
   padding-left: 5.7rem;
   display: block;
@@ -668,7 +693,7 @@ body {
   white-space: nowrap;
   display: block;
   position: relative;
-  color: var(--clr-light);
+  color: #909090;
   padding: 0 5px;
 }
 .header .menu-wrap a:hover,
@@ -926,8 +951,8 @@ body {
   .nav .submenu-inner a {
     display: block;
     padding: 5px 10px;
-    font-size: 10px;
-    text-transform: uppercase;
+    font-size: 16px;
+    text-transform: none;
     color: #808080;
   }
   .nav .submenu-inner a:hover,
@@ -937,8 +962,8 @@ body {
   .nav .submenu-wrap > li > a {
     display: block;
     padding: 5px 10px;
-    font-size: 12px;
-    text-transform: uppercase;
+    font-size: 16px;
+    text-transform: none;
     color: #808080;
     position: relative;
   }
@@ -1238,6 +1263,7 @@ body {
     display: block;
     position: relative;
     color: #808080;
+    text-transform: uppercase;
     z-index: 2;
     padding: 7px 10px 7px 10px;
   }
@@ -1356,6 +1382,9 @@ body {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+  }
+  .nav .btn-menu {
+    letter-spacing: 0.03em;
   }
   .nav .fixed-wrap {
     position: absolute;
@@ -1512,10 +1541,15 @@ body {
       flex-shrink: 0;
 }
 .item-review .rv-link-wrap a {
-  display: block;
+  display: inline-block;
+  -webkit-transition: color ease 0.2s;
+  transition: color ease 0.2s;
   color: #dcdddd;
   height: 30px;
   line-height: 30px;
+}
+.item-review .rv-link-wrap a:hover {
+  color: #f00;
 }
 .item-review .rv-wrap {
   display: block;
@@ -1616,6 +1650,7 @@ body {
   min-height: 100%;
   line-height: 1.05882353;
   font-size: 16.999px;
+  font-size: 16.999px;
   font-size: 1.69999728rem;
 }
 .item-new:hover {
@@ -1712,6 +1747,7 @@ body {
   text-align: left;
   color: var(--clr-base);
   font-size: 20.999px;
+  font-size: 20.999px;
   font-size: 2.09999664rem;
 }
 .item-delivery .del-title-wrap .del-title {
@@ -1779,6 +1815,7 @@ body {
   color: #7c7c7c;
   line-height: 1.1;
   padding: 5px 50px 6px 35px;
+  padding: 5px 50px 6px 35px;
   padding: 5px 50px 6px 3.5rem;
   background: #fff;
   position: relative;
@@ -1788,6 +1825,7 @@ body {
       -ms-flex-align: center;
           align-items: center;
   min-height: 40px;
+  font-size: 24.999px;
   font-size: 24.999px;
   font-size: 2.499996rem;
 }
@@ -1833,6 +1871,7 @@ body {
   text-transform: none;
   text-align: center;
   font-size: 24.999px;
+  font-size: 24.999px;
   font-size: 2.499996rem;
 }
 .item-faq .btn-faq .btn .button-ico {
@@ -1861,6 +1900,7 @@ body {
   background: #fff;
   color: #858585;
   line-height: 1.11111111;
+  font-size: 17.999px;
   font-size: 17.999px;
   font-size: 1.79999712rem;
 }
@@ -1892,6 +1932,7 @@ body {
   width: 100%;
   padding: 0 10px;
   text-transform: none;
+  font-size: 17.999px;
   font-size: 17.999px;
   font-size: 1.79999712rem;
 }
@@ -2007,7 +2048,7 @@ body {
   bottom: 8px;
   left: 0;
   width: 100%;
-  height: auto;
+  height: 100%;
 }
 .item-video .img {
   display: block;
@@ -2036,6 +2077,8 @@ body {
   right: 0;
   z-index: 4;
   margin: auto;
+  width: 100%;
+  height: 100%;
 }
 .item-video:after {
   content: "";
@@ -2063,6 +2106,7 @@ body {
   position: relative;
   line-height: 1.15;
   font-size: 20.999px;
+  font-size: 20.999px;
   font-size: 2.09999664rem;
 }
 .item-info .info-text-wrap {
@@ -2077,7 +2121,9 @@ body {
 }
 .item-info .elm-ico {
   width: 70px;
+  width: 70px;
   width: 7rem;
+  height: 58px;
   height: 58px;
   height: 5.8rem;
   -ms-flex-negative: 0;
@@ -2320,9 +2366,6 @@ body {
     font-size: 16px;
     height: auto;
   }
-  .item-client .btn.button-border .button-ico {
-    display: none;
-  }
   .item-client .btn.button-border:hover {
     color: var(--clr-att);
     background: none;
@@ -2367,27 +2410,25 @@ body {
 .contacts-box .elm-cnt:last-child {
   margin-bottom: 0;
 }
-.contacts-box .h1-title {
+.contacts-box .main-title {
   margin: 0 0 0.2em 0;
   color: #0085fe;
 }
-.contacts-box .h1-title .icon-phone-small {
+.contacts-box .main-title .icon-phone-small {
   display: inline-block;
   vertical-align: middle;
   margin-left: 8px;
 }
 .contacts-box .soc-wrap {
   width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  font-size: 1px;
   margin: 0 -8px 0 0;
   padding-top: 5px;
 }
 .contacts-box .soc-wrap .button-soc {
   margin: 0 8px 8px 0;
+  display: inline-block;
+  vertical-align: top;
 }
 .contacts-box a:not([class]) {
   color: #0685fb;
@@ -2508,6 +2549,7 @@ body {
   padding: 0 10px;
   text-transform: none;
   font-size: 24.999px;
+  font-size: 24.999px;
   font-size: 2.499996rem;
 }
 .reviews-slider-box .action-wrap .btn .button-ico {
@@ -2582,7 +2624,7 @@ body {
 .delivery-box .price-wrap {
   margin-bottom: 30px;
 }
-.delivery-box .price-wrap .h1-title {
+.delivery-box .price-wrap .main-title {
   font-weight: bold;
   text-align: left;
   margin: 0 0 1em 0;
@@ -2591,39 +2633,8 @@ body {
   margin-bottom: 30px;
 }
 .delivery-box .price-table {
-  overflow: auto;
+  overflow: hidden;
   padding-bottom: 10px;
-}
-.delivery-box .price-table::-webkit-scrollbar {
-  height: 4px;
-  width: 4px;
-  background-color: #f0f0f0;
-}
-.delivery-box .price-table::-webkit-scrollbar-thumb {
-  background-color: var(--clr-light);
-}
-.delivery-box .price-table::-webkit-scrollbar-thumb:hover {
-  background-color: var(--clr-light);
-}
-.delivery-box .price-table::-webkit-scrollbar-button:vertical:start:decrement {
-  background-color: transparent;
-  width: 0;
-  height: 0;
-}
-.delivery-box .price-table::-webkit-scrollbar-button:vertical:end:increment {
-  background-color: transparent;
-  width: 0;
-  height: 0;
-}
-.delivery-box .price-table::-webkit-scrollbar-button:horizontal:start:decrement {
-  background-color: transparent;
-  width: 0;
-  height: 0;
-}
-.delivery-box .price-table::-webkit-scrollbar-button:horizontal:end:increment {
-  background-color: transparent;
-  width: 0;
-  height: 0;
 }
 .delivery-box .price-table img {
   width: 100%;
@@ -2717,6 +2728,7 @@ body {
   height: 49px;
   text-transform: none;
   font-size: 24.999px;
+  font-size: 24.999px;
   font-size: 2.499996rem;
 }
 .faq-box .action-wrap .btn .button-ico {
@@ -2785,9 +2797,11 @@ body {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   margin: 0 -17px 0 0;
+  margin: 0 -17px 0 0;
   margin: 0 -1.7rem 0 0;
 }
 .catalog-box li {
+  margin: 0 15px 18px 0;
   margin: 0 15px 18px 0;
   margin: 0 1.5rem 1.8rem 0;
   padding: 0;
@@ -2813,6 +2827,7 @@ body {
   text-align: center;
   color: var(--clr-base);
   font-size: 18.999px;
+  font-size: 18.999px;
   font-size: 1.89999696rem;
 }
 .catalog-box .btn-menu:hover,
@@ -2832,6 +2847,7 @@ body {
   line-height: 1.11111111;
   color: #a0a0a0;
   font-size: 17.999px;
+  font-size: 17.999px;
   font-size: 1.79999712rem;
 }
 .inner-article-box:before {
@@ -2844,7 +2860,7 @@ body {
   width: 1px;
   background: #a5a5a5;
 }
-.inner-article-box .h1-title {
+.inner-article-box .main-title {
   page-break-inside: avoid;
   -webkit-column-break-inside: avoid;
      -moz-column-break-inside: avoid;
@@ -2852,7 +2868,7 @@ body {
   color: var(--clr-base);
   margin-top: 1.5em;
 }
-.inner-article-box .h1-title:first-child {
+.inner-article-box .main-title:first-child {
   margin-top: 0;
 }
 .inner-article-box .article-section {
@@ -2870,6 +2886,7 @@ body {
   background: #9d9d9d;
 }
 .article-box {
+  margin-bottom: 50px;
   margin-bottom: 50px;
   margin-bottom: 5rem;
 }
@@ -2897,6 +2914,7 @@ body {
   margin-bottom: 30px;
 }
 .pluses-box .title-box {
+  margin-bottom: 30px;
   margin-bottom: 30px;
   margin-bottom: 3rem;
 }
@@ -2964,6 +2982,7 @@ body {
 }
 .form-box .btn {
   text-transform: uppercase;
+  font-size: 17.999px;
   font-size: 17.999px;
   font-size: 1.79999712rem;
   padding: 0 8px;
@@ -3089,6 +3108,7 @@ body {
   position: relative;
   cursor: pointer;
   height: 50px;
+  height: 50px;
   height: 5rem;
   padding: 0 34px 0 20px;
   text-transform: uppercase;
@@ -3146,6 +3166,7 @@ body {
 }
 .info-box {
   padding: 50px 0 20px 0;
+  padding: 50px 0 20px 0;
   padding: 5rem 0 2rem 0;
 }
 .info-box .items-wrap {
@@ -3164,9 +3185,10 @@ body {
   position: relative;
   margin-bottom: 1em;
   font-size: 17.999px;
+  font-size: 17.999px;
   font-size: 1.79999712rem;
 }
-.title-box .h1-title {
+.title-box .main-title {
   margin-bottom: 0.1em;
   margin-top: 0;
 }
@@ -3221,6 +3243,10 @@ body {
     margin-right: -20px;
     padding-left: 20px;
     padding-right: 20px;
+    overflow: auto;
+  }
+  .delivery-box .price-table table {
+    width: 1000px;
   }
   .contacts-box .item-wrap {
     font-size: 14px;
@@ -3306,6 +3332,9 @@ body {
   .delivery-box .del-tab-wrap {
     display: none !important;
   }
+  .delivery-box .price-table table {
+    width: 700px;
+  }
   .contacts-box .item-wrap {
     width: 50%;
   }
@@ -3313,6 +3342,10 @@ body {
     -webkit-columns: 3;
        -moz-columns: 3;
             columns: 3;
+  }
+  .article-box,
+  .inner-article-box {
+    font-size: 16px;
   }
 }
 @media (max-width: 639px) {
@@ -3444,10 +3477,10 @@ body {
     padding-left: 70px;
     padding-right: 70px;
   }
-  .delivery-box .price-wrap .h1-title {
+  .delivery-box .price-wrap .main-title {
     font-size: 2.09999664rem;
   }
-  .article-box .h1-title {
+  .article-box .main-title {
     font-size: 26.041625px;
   }
 }
@@ -3462,7 +3495,7 @@ body {
     margin-left: auto;
     margin-right: -630px;
   }
-  .contacts-box .h1-title {
+  .contacts-box .main-title {
     font-size: 3.34999464rem;
   }
 }
@@ -3471,6 +3504,7 @@ body {
 \* ----------------------------------- */
 .form-input {
   height: 42px;
+  padding: 0 10px 0 28px;
   padding: 0 10px 0 28px;
   padding: 0 10px 0 2.8rem;
   background: #fff;
@@ -3562,7 +3596,7 @@ input[type="submit"].button-third:hover {
   border-radius: 0;
   padding: 0;
   margin: 0;
-  font-size: 0;
+  font-size: 1px;
   display: block;
   position: relative;
   overflow: hidden;
@@ -3655,7 +3689,9 @@ input[type="submit"].button-third:hover {
 }
 .btn-action-ico.ico-arrow {
   width: 100px;
+  width: 100px;
   width: 10rem;
+  height: 100px;
   height: 100px;
   height: 10rem;
   z-index: 20;
@@ -3670,6 +3706,7 @@ input[type="submit"].button-third:hover {
           transform: rotate(180deg);
 }
 .btn-action-ico.button-soc {
+  height: 34px;
   height: 34px;
   height: 3.4rem;
   width: auto;
@@ -3760,10 +3797,10 @@ input[type="submit"].button-third:hover {
 }
 .frm-select label:after {
   content: "";
-  background-image: url(../img/spr.png);
-  background-position: -105px -40px;
   width: 23px;
   height: 19px;
+  background: #fd2222 url(../img/icons/check.svg) center no-repeat;
+  background-size: 13px auto;
   position: absolute;
   top: 0;
   left: 0;
@@ -3789,7 +3826,7 @@ input[type="submit"].button-third:hover {
   top: 100%;
   left: 100%;
   opacity: 0;
-  font-size: 0;
+  font-size: 1px;
   pointer-events: none;
 }
 .frm-field-file .file-caption {
@@ -3813,6 +3850,7 @@ input[type="submit"].button-third:hover {
   line-height: 42px;
   text-align: center;
   font-size: 19.208px;
+  font-size: 19.208px;
   font-size: 1.92083026rem;
   position: relative;
   overflow: hidden;
@@ -3828,6 +3866,7 @@ input[type="submit"].button-third:hover {
 }
 .frm-main-search .form-input {
   height: 30px;
+  padding: 0 40px 0 16px;
   padding: 0 40px 0 16px;
   padding: 0 40px 0 1.6rem;
   border-color: #818181;
@@ -3856,7 +3895,7 @@ input[type="submit"].button-third:hover {
   position: relative;
   line-height: 1;
   text-align: center;
-  font-size: 0;
+  font-size: 1px;
   margin: 0;
 }
 .slick-dots li {
@@ -3874,7 +3913,7 @@ input[type="submit"].button-third:hover {
   padding: 0;
   -webkit-box-shadow: none;
           box-shadow: none;
-  font-size: 0;
+  font-size: 1px;
   width: 8px;
   height: 8px;
   border-radius: 50%;

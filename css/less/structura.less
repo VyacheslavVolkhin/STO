@@ -346,7 +346,7 @@ html {
             position: relative;
             overflow: hidden;
             text-overflow: ellipsis;
-            font-weight: 600;
+            //font-weight: 600;
         }
     }
     .shedule-wrap {
@@ -401,7 +401,7 @@ html {
             white-space: nowrap;
             display: block;
             position: relative;
-            color: var(--clr-light);
+            color: #909090;
             padding: 0 5px;
             &:hover, &.active {
                 color: var(--clr-att);
@@ -646,8 +646,8 @@ html {
             a {
                 display: block;
                 padding: 5px 10px;
-                font-size: 10px;
-                text-transform: uppercase;
+                font-size: 16px;
+                text-transform: none;
                 color: #808080;
                 &:hover, &.active {
                     color: var(--clr-att);
@@ -659,8 +659,8 @@ html {
                 &>a {
                     display: block;
                     padding: 5px 10px;
-                    font-size: 12px;
-                    text-transform: uppercase;
+                    font-size: 16px;
+                    text-transform: none;
                     color: #808080;
                     position: relative;
                     &:hover, &.active {
@@ -946,6 +946,7 @@ html {
                     display: block;
                     position: relative;
                     color: #808080;
+                    text-transform: uppercase;
                     z-index: 2;
                     padding: 7px 10px 7px 10px;
                 }
@@ -1057,6 +1058,9 @@ html {
         }
     }
     .nav {
+        .btn-menu {
+            .lse(30);
+        }
         .fixed-wrap {
             position: absolute;
             bottom: 0;

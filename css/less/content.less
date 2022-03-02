@@ -22,7 +22,7 @@
             margin-bottom: 0;
         }
     }
-    .h1-title {
+    .main-title {
         margin: 0 0 0.2em 0;
         //color: #0685fb;
         color: #0085fe;
@@ -34,12 +34,13 @@
     }
     .soc-wrap {
         width: 100%;
-        display: flex;
-        flex-wrap: wrap;
+        font-size: 1px;
         margin: 0 -8px 0 0;
         padding-top: 5px;
         .button-soc {
             margin: 0 8px 8px 0;
+            display: inline-block;
+            vertical-align: top;
         }
     }
     a {
@@ -207,7 +208,7 @@
     }
     .price-wrap {
         margin-bottom: 30px;
-        .h1-title {
+        .main-title {
             font-weight: bold;
             text-align: left;
             margin: 0 0 1em 0;
@@ -217,39 +218,39 @@
         margin-bottom: 30px;
     }
     .price-table {
-        overflow: auto;
+        overflow: hidden;
         padding-bottom: 10px;
-        &::-webkit-scrollbar {
-            height: 4px;
-            width: 4px;
-            background-color: #f0f0f0;
-        }
-        &::-webkit-scrollbar-thumb {
-            background-color: var(--clr-light);
-        }
-        &::-webkit-scrollbar-thumb:hover {
-            background-color: var(--clr-light);
-        }
-        &::-webkit-scrollbar-button:vertical:start:decrement {
-            background-color: transparent;
-            width: 0;
-            height: 0;
-        }
-        &::-webkit-scrollbar-button:vertical:end:increment {
-            background-color: transparent;
-            width: 0;
-            height: 0;
-        }
-        &::-webkit-scrollbar-button:horizontal:start:decrement {
-            background-color: transparent;
-            width: 0;
-            height: 0;
-        }
-        &::-webkit-scrollbar-button:horizontal:end:increment {
-            background-color: transparent;
-            width: 0;
-            height: 0;
-        }
+        //&::-webkit-scrollbar {
+            //height: 4px;
+            //width: 4px;
+            //background-color: #f0f0f0;
+        //}
+        //&::-webkit-scrollbar-thumb {
+            //background-color: var(--clr-light);
+        //}
+        //&::-webkit-scrollbar-thumb:hover {
+            //background-color: var(--clr-light);
+        //}
+        //&::-webkit-scrollbar-button:vertical:start:decrement {
+            //background-color: transparent;
+            //width: 0;
+            //height: 0;
+        //}
+        //&::-webkit-scrollbar-button:vertical:end:increment {
+            //background-color: transparent;
+            //width: 0;
+            //height: 0;
+        //}
+        //&::-webkit-scrollbar-button:horizontal:start:decrement {
+            //background-color: transparent;
+            //width: 0;
+            //height: 0;
+        //}
+        //&::-webkit-scrollbar-button:horizontal:end:increment {
+            //background-color: transparent;
+            //width: 0;
+            //height: 0;
+        //}
         img {
             width: 100%;
             min-width: 952px;
@@ -437,7 +438,7 @@
         width: 1px;
         background: #a5a5a5;
     }
-    .h1-title {
+    .main-title {
         page-break-inside: avoid;
         break-inside: avoid-column;
         color: var(--clr-base);
@@ -721,7 +722,7 @@
     position: relative;
     margin-bottom: 1em;
     .fr(4.32);
-    .h1-title {
+    .main-title {
         margin-bottom: 0.1em;
         margin-top: 0;
     }
@@ -781,6 +782,10 @@
             margin-right: -20px;
             padding-left: 20px;
             padding-right: 20px;
+            overflow: auto;
+            table {
+                width: 1000px;
+            }
         }
     }
     .contacts-box {
@@ -882,6 +887,11 @@
         .del-tab-wrap {
             display: none !important;
         }
+        .price-table {
+            table {
+                width: 700px;
+            }
+        }
     }
     .contacts-box {
         .item-wrap {
@@ -894,6 +904,9 @@
                 columns: 3;
             }
         }
+    }
+    .article-box, .inner-article-box {
+        font-size: 16px;
     }
 }
 @media (max-width: 639px) {
@@ -1049,13 +1062,13 @@
     }
     .delivery-box {
         .price-wrap {
-            .h1-title {
+            .main-title {
                 .fr(5.04);
             }
         }
     }
     .article-box {
-        .h1-title {
+        .main-title {
             .fp(6.25);
         }
     }
@@ -1074,7 +1087,7 @@
         }
     }
     .contacts-box {
-        .h1-title {
+        .main-title {
             .fr(8.04);
         }
     }

@@ -68,7 +68,7 @@ input[type="submit"] {
 	border-radius: 0;
 	padding: 0;
 	margin: 0;
-	font-size: 0;
+	font-size: 1px;
 	display: block;
 	position: relative;
 	overflow: hidden;
@@ -245,7 +245,10 @@ input[type="submit"] {
         }
         &:after {
             content: "";
-            .icon-check;
+            width: 23px;
+            height: 19px;
+            background: #fd2222 url(../img/icons/check.svg) center no-repeat;
+            background-size: 13px auto;
             position: absolute;
             top: 0;
             left: 0;
@@ -274,7 +277,7 @@ input[type="submit"] {
         top: 100%;
         left: 100%;
         opacity: 0;
-        font-size: 0;
+        font-size: 1px;
         pointer-events: none;
     }
     .file-caption {
@@ -333,7 +336,7 @@ input[type="submit"] {
     position: relative;
     line-height: 1;
     text-align: center;
-    font-size: 0;
+    font-size: 1px;
     margin: 0;
     li {
         margin: 0 5px;
@@ -348,7 +351,7 @@ input[type="submit"] {
             min-width: 0;
             padding: 0;
             box-shadow: none;
-            font-size: 0;
+            font-size: 1px;
             width: 8px;
             height: 8px;
             border-radius: 50%;
