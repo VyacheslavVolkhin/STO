@@ -106,10 +106,15 @@
     }
     .slider-wrap {
         position: relative;
-        margin: 0 -9px 30px -9px;
+        margin: 0 -5px 30px -5px;
+        padding: 0 0 44px 0;
+    }
+    .slick-dots {
+        position: static;
+        margin: 30px 0 0 0;
     }
     .sl-wrap {
-        padding: 0 9px;
+        padding: 0 5px;
     }
     .ico-arrow {
         position: absolute;
@@ -736,9 +741,53 @@
     position: relative;
     overflow: hidden;
     .sl-wrap {
-        height: 276px;
+        min-height: 276px;
+        padding-top: 40px;
+        padding-bottom: 40px;
         position: relative;
         overflow: hidden;
+        display: flex !important;
+        align-items: center;
+        &:after {
+            content: "";
+            display: block;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            z-index: 2;
+            background: linear-gradient(to right,rgba(255,255,255,1) 0%,rgba(243,243,243,0.3) 45%,rgba(243,243,243,0.3) 45%,rgba(243,243,243,0) 100%);
+        }
+    }
+    .sl-text-wrap {
+        display: block;
+        flex-shrink: 0;
+        position: relative;
+        z-index: 3;
+        padding: 0 80px;
+        width: 100%;
+    }
+    .slider-text {
+        display: block;
+        font-size: 38px;
+        line-height: 40/38;
+        text-transform: uppercase;
+        color: #404040;
+        font-weight: 300;
+        margin-bottom: 15px;
+        max-width: 100%;
+        &:last-child {
+            margin-bottom: 0;
+        }
+        .red {
+            color: red;
+        }
+    }
+    .btn {
+        height: 32px;
+        padding: 0 20px;
+        font-size: 14px;
     }
     .ico-arrow {
         position: absolute;
@@ -910,6 +959,9 @@
     }
 }
 @media (max-width: 639px) {
+    .main-slider-box {
+        display: none;
+    }
     .inner-article-box {
         columns: 1;
         &:before {
@@ -1051,13 +1103,24 @@
         }
     }
 }
+@media (min-width: 768px) {
+    .contacts-box {
+        .item-wrap {
+            width: auto;
+            max-width: 33.33%;
+        }
+        .items-wrap {
+            justify-content: space-between;
+        }
+    }
+}
 @media (min-width: 993px) {
     .reviews-slider-box {
         .slider-wrap {
             margin-bottom: 30px;
             padding-bottom: 0;
-            padding-left: 70px;
-            padding-right: 70px;
+            //padding-left: 70px;
+            //padding-right: 70px;
         }
     }
     .delivery-box {

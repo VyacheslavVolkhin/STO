@@ -75,11 +75,10 @@ $(document).ready(function(){
 
 
     //item-video
-    $('.js-btn-video').on('click', function () {
-        let videoURL = $(this).parent('.item-video').attr('data-video');
-        $(this).parents('.item-video').addClass('active');
-        $(this).parents('.item-video').append('<iframe width="100%" height="100%" src="' + videoURL + '" frameborder="0" allowfullscreen></iframe>')
-        return false;
+    $('.js-video').each(function() {
+        let videoURL = $(this).attr('data-video');
+        $(this).addClass('active');
+        $(this).append('<iframe width="100%" height="100%" src="' + videoURL + '" frameborder="0" allowfullscreen></iframe>')
     })
 
 
@@ -231,42 +230,50 @@ $(document).ready(function(){
     if (!!$('.clients-slider-box').offset()) {
         $('.clients-slider-box .slider').slick({
             dots: true,
-            slidesToShow: 1,
-            variableWidth: true,
+            slidesToShow: 7,
+            variableWidth: false,
             infinite: true,
             adaptiveHeight: false,
             prevArrow: false,
             nextArrow: false,
+            responsive: [
+                {
+                    breakpoint: 1200,
+                    settings: {
+                        slidesToShow: 5,
+                    }
+                },
+                {
+                    breakpoint: 640,
+                    settings: {
+                        slidesToShow: 3,
+                    }
+                },
+            ]
         });
     }
 
     //reviews-slider-box
     if (!!$('.reviews-slider-box').offset()) {
         $('.reviews-slider-box .slider').slick({
-            dots: false,
+            dots: true,
             slidesToShow: 3,
             variableWidth: false,
             infinite: true,
             adaptiveHeight: false,
-            prevArrow: '<span class="btn-action-ico ico-arrow ico-arrow-prev"></span>',
-            nextArrow: '<span class="btn-action-ico ico-arrow ico-arrow-next"></span>',
+            prevArrow: false,
+            nextArrow: false,
             responsive: [
                 {
                     breakpoint: 993,
                     settings: {
                         slidesToShow: 2,
-                        dots: true,
-                        prevArrow: false,
-                        nextArrow: false,
                     }
                 },
                 {
                     breakpoint: 640,
                     settings: {
                         slidesToShow: 1,
-                        dots: true,
-                        prevArrow: false,
-                        nextArrow: false,
                     }
                 },
             ]
