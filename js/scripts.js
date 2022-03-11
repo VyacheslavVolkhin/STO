@@ -294,3 +294,24 @@ $(document).ready(function(){
 });
 
 
+$(window).on('load', function () {
+    let mLeft = 0;
+    let mLeftFull = 0;
+    let mWidth = 0;
+    let mWidthFull = 0;
+    $('.main-menu-wrap .submenu-outer-wrap').each(function () {
+        mLeft = $(this).parent('li').position().left - $(this).parents('.menu').position().left;
+        mLeftFull = $(this).parents('.menu').find('.menu-catalog').outerWidth();
+        mWidth = $(this).parents('.menu').outerWidth() - mLeft;
+        mWidthFull = $(this).parents('.menu').outerWidth() - mLeftFull;
+        if (mWidth < 500) {
+            mWidth = mWidthFull;
+            mLeft = mLeftFull;
+        }
+        if ((mWidth < 800) && mWidth > 500) {
+            $(this).addClass('menu-col2')
+        }
+        $(this).width(mWidth).css('left', mLeft);
+        console.log(mWidth)
+    })
+});
