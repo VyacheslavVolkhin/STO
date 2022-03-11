@@ -186,6 +186,16 @@ $(document).ready(function(){
             adaptiveHeight: false,
             prevArrow: '<span class="btn-action-ico ico-arrow ico-arrow-prev"></span>',
             nextArrow: '<span class="btn-action-ico ico-arrow ico-arrow-next"></span>',
+            responsive: [
+                {
+                    breakpoint: 640,
+                    settings: {
+                        dots: true,
+                        prevArrow: false,
+                        nextArrow: false,
+                    }
+                },
+            ]
         });
     }
 

@@ -960,7 +960,19 @@
 }
 @media (max-width: 639px) {
     .main-slider-box {
-        display: none;
+        .sl-text-wrap {
+            padding: 0;
+        }
+        .slick-dots {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding-bottom: 20px;
+        }
+        .slider-text {
+            font-size: 30px;
+        }
     }
     .inner-article-box {
         columns: 1;
@@ -1016,6 +1028,11 @@
     }
 }
 @media (max-width: 479px) {
+    .main-slider-box {
+        .slider-text {
+            font-size: 24px;
+        }
+    }
     .contacts-box {
         .item-wrap {
             width: 100%;
