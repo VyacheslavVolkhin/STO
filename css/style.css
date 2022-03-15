@@ -2484,6 +2484,9 @@ body {
   .item-faq .faq-content-block {
     padding-left: 35px;
   }
+  .item-client .client-title {
+    font-size: 1.2em;
+  }
 }
 /* ----------------------------------- *\
 			content styles
