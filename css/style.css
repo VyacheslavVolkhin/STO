@@ -1555,6 +1555,9 @@ body {
     padding-top: 12px;
     padding-bottom: 12px;
   }
+  .nav .btn-menu {
+    font-size: 16px;
+  }
 }
 /* ----------------------------------- *\
 			items styles

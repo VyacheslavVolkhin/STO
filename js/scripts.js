@@ -312,6 +312,5 @@ $(window).on('load', function () {
             $(this).addClass('menu-col2')
         }
         $(this).width(mWidth).css('left', mLeft);
-        console.log(mWidth)
     })
 });
