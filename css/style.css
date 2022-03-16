@@ -3655,6 +3655,9 @@ body {
   .article-box .main-title {
     font-size: 26.041625px;
   }
+  .contacts-box .main-title {
+    font-size: 2.51666264rem;
+  }
 }
 @media (min-width: 1250px) {
   .main-slider-box .ico-arrow {
@@ -3666,9 +3669,6 @@ body {
     right: 50%;
     margin-left: auto;
     margin-right: -630px;
-  }
-  .contacts-box .main-title {
-    font-size: 3.34999464rem;
   }
 }
 /* ----------------------------------- *\
