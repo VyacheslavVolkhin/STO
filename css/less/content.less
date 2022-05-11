@@ -184,6 +184,9 @@
 }
 .delivery-box {
     margin-bottom: 30px;
+    table {
+        font-size: 16px;
+    }
     .title-box {
         margin-bottom: 25px;
     }
@@ -209,7 +212,7 @@
         background: #f1f1f1;
         padding: 20px 20px 20px 40px;
         .fp(4.38);
-        line-height: 0.95;
+        line-height: 24/17;
     }
     .price-wrap {
         margin-bottom: 30px;
@@ -467,6 +470,7 @@
 }
 .article-box {
     margin-bottom: 5rem;
+    font-size: 16px;
 }
 .video-box {
     margin-bottom: 20px;
@@ -566,7 +570,6 @@
 }
 .menu-box {
     margin-bottom: 35px;
-
     .menu-toggle-wrap {
         display: none;
         position: absolute;
@@ -924,6 +927,7 @@
     }
 }
 @media (max-width: 767px) {
+    
     .delivery-box {
         .item-wrap {
             width: 100%;
@@ -1002,6 +1006,9 @@
         }
     }
     .menu-box {
+        .title-box {
+            font-size: 2rem;
+        }
         .menu-outer-wrap {
         }
         .menu-inner-wrap {
@@ -1016,7 +1023,7 @@
             }
         }
         .btn-menu {
-            font-size: 11px;
+            font-size: 13px;
             padding-left: 10px;
             padding-right: 24px;
             &:after {
@@ -1025,6 +1032,15 @@
                 right: 6px;
             }
         }
+    }
+}
+@media (max-width: 575px) {
+    
+    .info-box {
+        display: none;
+    }
+    .main-slider-box {
+        margin-bottom: 20px;
     }
 }
 @media (max-width: 479px) {
@@ -1128,6 +1144,11 @@
         }
         .items-wrap {
             justify-content: space-between;
+        }
+    }
+    .delivery-box {
+        table {
+            font-size: 18px;
         }
     }
 }
