@@ -137,8 +137,14 @@ input[type="submit"] {
         &.active {
             &:before {
                 .t-rotate(45deg);
+                border-color: #fff;
+                width: 16px;
+                margin-left: -8px;
             }
             &:after {
+                border-color: #fff;
+                width: 16px;
+                margin-left: -8px;
                 border-top: none;
                 height: 2px;
                 margin-top: -1px;
@@ -316,6 +322,47 @@ input[type="submit"] {
         }
     }
 }
+.frm-popup {
+    .frm-row {
+        margin: 0 -5px;
+    }
+    .frm-row-submit {
+        text-align: center;
+        display: block;
+    }
+    .frm-field {
+        padding: 0 5px;
+        margin-bottom: 20px;
+        position: relative;
+    }
+    .field-third {
+        width: 33.33%;
+    }
+    .field-half {
+        width: 50%;
+    }
+    .field-file {
+        margin-top: -20px;
+    }
+    .frm-field-file {
+        .btn-file {
+            text-align: left;
+        }
+    }
+    .submit-info {
+        margin-bottom: 10px;
+        .frm-select {
+            display: inline-block;
+        }
+    }
+    .submit-button {
+        display: block;
+    }
+    textarea.form-input {
+        height: 100px;
+        padding-top: 10px;
+    }
+}
 .frm-main-search {
     display: block;
     position: relative;
@@ -381,5 +428,12 @@ input[type="submit"] {
     .form-input {
         font-size: 14px;
         padding-left: 14px;
+    }
+}
+@media (max-width: 639px) {
+    .frm-popup {
+        .field-third, .field-half {
+            width: 100%;
+        }
     }
 }

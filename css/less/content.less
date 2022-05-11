@@ -1,6 +1,63 @@
 /* ----------------------------------- *\
 			content styles
 \* ----------------------------------- */
+.popup-box {
+    display: none;
+    &.fancybox-content {
+        width: 768px;
+        background: #fff;
+        border-radius: 5px;
+        padding: 20px;
+    }
+    .fancybox-button.fancybox-close-small {
+        width: 40px;
+        height: 40px;
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        &:hover {
+            background: none;
+            &:after, &:before {
+                background: #000;
+            }
+        }
+        &:after, &:before {
+            content: "";
+            display: block;
+            width: 18px;
+            height: 2px;
+            background: #8B949E;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin: -1px 0 0 -9px;
+            .t-rotate(45deg);
+            border-radius: 1px;
+            transition: background ease 0.2s;
+        }
+        &:before {
+            .t-rotate(-45deg);
+        }
+        * {
+            display: none;
+        }
+    }
+    .popup-title-wrap {
+        display: block;
+        margin-bottom: 20px;
+        padding-right: 15px;
+    }
+    .popup-title {
+        font-weight: bold;
+        margin: 0 0 0.5em 0;
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}
+.fancybox-bg {
+    background: fade(#000, 70);
+}
 .contacts-box {
     .items-wrap {
         margin: 0 -15px;
@@ -963,6 +1020,11 @@
     }
 }
 @media (max-width: 639px) {
+    .popup-box {
+        &.fancybox-content {
+            width: 300px;
+        }
+    }
     .main-slider-box {
         .sl-text-wrap {
             padding: 0;

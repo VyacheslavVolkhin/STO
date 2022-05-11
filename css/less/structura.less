@@ -580,8 +580,113 @@ html {
             }
         }
     }
+    .menu-start {
+        .nav {
+            .menu {
+                &>li {
+                    display: none;
+                    &.open {
+                        display: block;
+                    }
+                }
+            }
+        }
+        &.menu-second {
+            .nav {
+                .menu {
+                    &>li {
+                        &>a {
+                            display: none;
+                        }
+                    }
+                }
+                .submenu-wrap {
+                    &>li {
+                        display: none;
+                        &.open {
+                            display: block;
+                        }
+                    }
+                }
+            }
+        }
+    }
     .nav {
         position: static;
+        .fixed-wrap {
+            color: #fff;
+            .email-wrap {
+                a {
+                    color: #fff;
+                }
+            }
+            .callback-wrap {
+                .btn {
+                    color: #fff;
+                }
+            }
+        }
+        .menu {
+            font-size: 15px;
+            line-height: 20px;
+            li {
+                &.open {
+                    &>a, &>.btn-menu {
+                        padding-left: 30px;
+                        font-size: 0;
+                        text-indent: -999px;
+                        overflow: hidden;
+                        &:after {
+                            content: "Назад";
+                            font-size: 15px;
+                            text-indent: 0;
+                            position: absolute;
+                            display: flex;
+                            align-items: center;
+                            top: 0;
+                            bottom: 0;
+                            left: 0;
+                            right: 0;
+                            padding: 0 10px 0 30px;
+                        }
+                        &:before {
+                            .t-rotate(90deg);
+                            right: auto;
+                            left: 20px;
+                            margin: -5px 0 0 -9px;
+                        }
+                    }
+                    &>.submenu-outer-wrap, &>.submenu-inner {
+                        display: block;
+                    }
+                }
+            }
+            a {
+                display: block;
+                position: relative;
+                padding: 11px 30px 11px 10px;
+                color: #fff;
+                text-align: left;
+                text-transform: none;
+                border-bottom: 1px solid #fff;
+                transition: none;
+                &:before {
+                    content: "";
+                    display: block;
+                    width: 18px;
+                    height: 10px;
+                    position: absolute;
+                    top: 50%;
+                    right: 20px;
+                    margin: -5px -9px 0 0;
+                    //transition: transform ease 0.2s;
+                    filter: brightness(0) invert(1);
+                    background: url(../img/icons/arrow-select.svg) center no-repeat;
+                    background-size: 24px auto;
+                    .t-rotate(-90deg);
+                }
+            }
+        }
         .ico-menu {
             display: block;
             position: absolute;
@@ -591,6 +696,9 @@ html {
             z-index: 10;
             &.active {
                 z-index: 101;
+                right: 0px;
+                top: 8px;
+                margin-top: 0;
             }
         }
         .js-btn-toggle.active~.inner-wrap {
@@ -606,7 +714,8 @@ html {
             left: 0;
             right: 0;
             z-index: 100;
-            background: #fff;
+            background: #000000;
+            color: #fff;
         }
         .menu-wrap {
             flex: 1;
@@ -620,7 +729,7 @@ html {
                 }
             }
         }
-        .btn-menu {
+        /*.btn-menu {
             display: flex;
             align-items: center;
             justify-content: center;
@@ -650,7 +759,7 @@ html {
                 opacity: 0.8;
                 transition: all ease 0.2s;
             }
-        }
+        }*/
         .submenu-outer-wrap {
             display: none;
             left: auto !important;
@@ -660,7 +769,7 @@ html {
             display: none;
         }
         .submenu-inner {
-            a {
+            /*a {
                 display: block;
                 padding: 5px 10px;
                 font-size: 16px;
@@ -669,11 +778,11 @@ html {
                 &:hover, &.active {
                     color: var(--clr-att);
                 }
-            }
+            }*/
         }
         .submenu-wrap {
             &>li {
-                &>a {
+                /*&>a {
                     display: block;
                     padding: 5px 10px;
                     font-size: 16px;
@@ -688,7 +797,7 @@ html {
                     &>a {
                         color: var(--clr-att);
                     }
-                }
+                }*/
             }
         }
         .callback-wrap {
@@ -884,6 +993,31 @@ html {
                         &:after {
                             opacity: 1;
                             filter: none;
+                        }
+                    }
+                }
+                &.menu-simple {
+                    position: relative;
+                    .submenu-outer-wrap {
+                        min-width: 100% !important;
+                        width: 250px !important;
+                        left: 0 !important;
+                        .submenu-inner {
+                            columns: 1;
+                            padding-top: 10px;
+                            padding-bottom: 10px;
+                            &>li {
+                                padding: 0;
+                                ul {
+                                    padding: 0;
+                                }
+                                &:after {
+                                    display: none;
+                                }
+                                a {
+                                    padding: 5px 0;
+                                }
+                            }
                         }
                     }
                 }
