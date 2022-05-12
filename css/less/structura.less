@@ -176,7 +176,7 @@ html {
         }
     }
     .contacts-wrap {
-        width: 62%;
+        width: 50%;
         flex-shrink: 0;
         padding-right: 15px;
         .footer-title {
@@ -184,7 +184,7 @@ html {
         }
     }
     .info-wrap {
-        width: 38%;
+        width: 50%;
         flex-shrink: 0;
         line-height: 28/16;
         .footer-title {
@@ -1217,6 +1217,18 @@ html {
         }
         .ico-menu {
             display: none;
+        }
+    }
+}
+
+@media (min-width: 480px) and (max-width: 992px) {
+    .footer {
+        .contacts-wrap {
+            width: 100%;
+            padding-right: 0;
+        }
+        .info-wrap {
+            width: 100%;
         }
     }
 }
