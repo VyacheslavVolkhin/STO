@@ -336,9 +336,9 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   padding-top: 18px;
 }
 .footer .bottom-menu-wrap {
@@ -1809,7 +1809,14 @@ body {
     font-size: 16.66664px;
   }
   .footer .bottom-right-wrap {
-    padding-left: 100px;
+    padding-left: 140px;
+  }
+  .footer .bottom-icons-wrap {
+    width: 90px;
+  }
+  .footer .bottom-menu-wrap .menu a {
+    padding-top: 8px;
+    padding-bottom: 8px;
   }
 }
 /* ----------------------------------- *\
